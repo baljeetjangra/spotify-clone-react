@@ -28,8 +28,21 @@ function App() {
           user: user,
         });
       });
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists: playlists,
+        });
+      });
+      spotify.getPlaylist("imsertpublickeyofperson").then((res) => {
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          discover_weekly: res,
+        });
+      });
     }
   }, []);
+  // console.log(user);
   return (
     <div className="App">
       {token ? <Player spotify={spotify} /> : <Login />}
