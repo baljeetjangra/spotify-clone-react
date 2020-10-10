@@ -5,6 +5,7 @@ import { useDataLayerValue } from "../DataLayer";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import FavouriteIcon from "@material-ui/icons/Favorite";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import SongRow from "./SongRow";
 
 const Body = ({ spotify }) => {
   const [{ discover_weekly }, dispatch] = useDataLayerValue();
@@ -12,7 +13,7 @@ const Body = ({ spotify }) => {
     <div className="body">
       <Header spotify={spotify} />
       <div className="body__info">
-        <img src={discover_weekly?.images[0]?.url} alt="" />
+        <img src="" alt="" />
         <div className="body__infoText">
           <strong>PLAYLIST</strong>
           <h2>Discover Weekly</h2>
@@ -26,7 +27,7 @@ const Body = ({ spotify }) => {
           <MoreHorizIcon />
         </div>
         {discover_weekly?.tracks.items.map((item) => {
-          <SongRow tranck={item.track} />;
+          return <SongRow track={item.track} />;
         })}
       </div>
     </div>

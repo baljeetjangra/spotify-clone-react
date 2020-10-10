@@ -34,7 +34,7 @@ function App() {
           playlists: playlists,
         });
       });
-      spotify.getPlaylist("imsertpublickeyofperson").then((res) => {
+      spotify.getPlaylist("37i9dQZEVXcIJazRV9ISoM").then((res) => {
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: res,
@@ -42,7 +42,7 @@ function App() {
       });
     }
   }, []);
-  // console.log(user);
+  console.log(user);
   return (
     <div className="App">
       {token ? <Player spotify={spotify} /> : <Login />}

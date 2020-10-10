@@ -4,7 +4,11 @@
   background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
   height: 100vh;
   color: white;
+  overflow-y: overlay;
   padding: 30px;
+}
+.body::-webkit-scrollbar {
+  display: none;
 }
 .body__info {
   display: flex;
@@ -23,7 +27,7 @@
   font: 14px;
 }
 .body__info > img {
-  height: 20vw;
+  /* height: 20vw; */
   margin: 0 20px;
   box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
 }
@@ -35,9 +39,9 @@
   margin-right: 20px;
 }
 .body__shuffle {
-  font-size: 80px !important;
+  font-size: 70px !important;
   margin-left: 50px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 .body__shuffle:hover {
