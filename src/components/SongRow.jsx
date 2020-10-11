@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/css/SongRow.css";
+
 const SongRow = ({ track }) => {
   return (
     <div className="songRow">
